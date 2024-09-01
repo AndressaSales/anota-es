@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloco de  Notas</title>
+    <link rel="stylesheet" href="../static/styles/mian.css">
+</head>
+<body>
+    <div>
+        <!-- Title -->
+        <h1>Anotações</h1>
+
+        <!-- Menu do bloco de notas -->
+         <div c-container="{{ url_for('notas.menu') }}">
+         </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/cru.js') }}"></script>
+</body>
+</html>
