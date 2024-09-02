@@ -3,7 +3,7 @@ from database.database import db
 import datetime
 
 class bancoNotas(Model):
-    nome = CharField()
+    title = CharField()
     text = TextField()
     time = DateTimeField(default = datetime.datetime.now)
 

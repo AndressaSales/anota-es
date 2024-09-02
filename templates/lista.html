@@ -1,0 +1,17 @@
+<div class="grid text-center">
+    
+    {% for bloco in blocos %}
+        <div>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{bloco.title}}</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">{{bloco.title}}</h6>
+                    <p class="card-text">{{bloco.text}}</p>
+                    <button type="submit" class="btn btn-danger">
+                        <img src="{{url_for('static', filename='image/delete.svg')}}" alt="">      
+                    </button>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
