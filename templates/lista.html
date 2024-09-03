@@ -1,14 +1,14 @@
-<div class="grid text-center">
+<div class="container-fluid text-center row justify-content-between d-flex ml-20 c">
     
     {% for bloco in blocos %}
-        <div>
+        <div class="col-12 col-md-6 col-lg-4 pb-3">
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-title">{{bloco.title}}</h5>
                     <h6 class="card-subtitle mb-2 text-body-secondary">{{bloco.title}}</h6>
                     <p class="card-text">{{bloco.text}}</p>
                     <button type="submit" class="btn btn-danger">
-                        <img src="{{url_for('static', filename='image/delete.svg')}}" alt="">      
+                        <img src="{{url_for('static', filename='image/delete.svg')}}" alt="delete">      
                     </button>
                 </div>
             </div>

@@ -9,12 +9,21 @@
 </head>
 <body>
     <div>
-        <!-- Title -->
-        <nav>
-            <h1>Anotações</h1>
-        </nav>
+        <!-- Navbar -->
+        <nav class="navbar nav bd-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand text-light" href="#">
+                <img src="{{url_for('static', filename="image/check.svg")}}" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                Anotações
+              </a>
+            </div>
+          </nav>
 
-        <h2>Tudo</h2>
+          <!-- formulario -->
+          <div c-container="{{url_for('notas.formulario')}}"></div>
+
+          <!-- postagens -->
+        <h2 class="p-4">Tudo</h2>
         <div c-container="{{url_for('notas.postados')}}" ></div>
     </div>
 
