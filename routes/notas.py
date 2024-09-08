@@ -25,3 +25,9 @@ def inserir_notas():
     )
 
     return render_template('items.html', notas=nova_anotacao)
+
+@notas_routes.route('/<int:notas_id>/delete' , methods=['DELETE'])
+def delete(notas_id):
+    notas = blocos.gey_by_id(notas_id)
+    notas.delete_instance()
+    return{'deleted' : 'ok'}
