@@ -1,11 +1,11 @@
 <div>
-    <div class="row" id="blocosnota-{{blocosnota.id}}">
-        <div class="pb-3 col-12">
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">{{blocosnota.title}}</h5>
-                    <h6 class="card-subtitle mb-2 text-body-secondary">{{blocosnota.time}}</h6>
-                    <p class="card-text">{{blocosnota.text}}</p>
+    <div class="grid sm:grid-cols-1 md:grid-cols-3" id="blocosnota-{{blocosnota.id}}">
+        <div>
+            <div class="">
+                <div class="">
+                    <h5 class="text-white">{{blocosnota.title}}</h5>
+                    <h6 class="text-white">{{blocosnota.time}}</h6>
+                    <p class="text-white">{{blocosnota.text}}</p>
                     <button 
                         type="submit" 
                         class="btn btn-danger"

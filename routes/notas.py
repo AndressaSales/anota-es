@@ -14,7 +14,7 @@ def formulario():
     return render_template('formulario.html')
 
 
-@notas_routes.route('/', methods=['POST'])
+@notas_routes.route('/', methods=['post'])
 def inserir_notas():
     """ inserir anotações novas """
     data = request.json
