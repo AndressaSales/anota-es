@@ -1,24 +1,22 @@
-<form  action="{{url_for('notas.inserir_notas')}}" method="post">
-  <div class=" flex flex-col">
-    <div class="p-3 lg:flex lg:items-center lg:justify-center lg:flex-row flex flex-col">
-      <label 
-        class="text-[#ffff] text-xl md:border-[#faa] md:border-4 md:border-t-transparent md:border-b-transparent md:border-r-transparent md:pl-2 lg:border-none lg:pr-2 lg:text-[#faa]"
-        >Título:</label>
-      <input 
-        type="text" 
-        class="bg-transparent border-[#fff] border-2 border-t-transparent border-l-transparent border-r-transparent text-[#faa] outline-none" 
-        name="title"
-      >
-    </div>
-    <div class="px-3">
-      <textarea 
-            class="w-full outline-0 bg-transparent border-2 border-[#faa] pl-2 text-[#fff] text-lg" 
-            placeholder="Comece a escrever...." id="floatingTextarea2" 
-            style="height: 200px" name="text"
-      ></textarea>
-    </div>
-    <div class="justify-center flex items-center p-4">
-          <button class="bg-sky-500 text-[#fff] w-[100px] font-bold text-lg rounded-sm">salvar</button>
-    </div>
+<form class=" flex flex-col  c-form" action="{{ url_for('notas.inserir') }}" method="POST">
+  <div class="p-3 lg:flex lg:items-center lg:justify-center lg:flex-row flex flex-col">
+    <label 
+      class="text-[#ffff] text-xl md:border-[#faa] md:border-4 md:border-t-transparent md:border-b-transparent md:border-r-transparent md:pl-2 lg:border-none lg:pr-2 lg:text-[#faa]"
+      >Título:</label>
+    <input 
+      type="text" 
+      class="bg-transparent border-[#fff] border-2 border-t-transparent border-l-transparent border-r-transparent text-[#faa] outline-none" 
+      name="title"
+    >
+  </div>
+  <div class="px-3">
+    <textarea 
+          class="w-full outline-0 bg-transparent border-2 border-[#faa] pl-2 text-[#fff] text-lg" 
+          placeholder="Comece a escrever...." id="floatingTextarea2" 
+          style="height: 200px" name="text"
+    ></textarea>
+  </div>
+  <div class="items-center justify-center flex py-3">
+      <button type="submit" class="text-[#fff] bg-sky-500 w-[100px] rounded-sm font-bold  font-mono">Salvar</button>
   </div>
 </form>

@@ -14,17 +14,17 @@ def formulario():
     return render_template('formulario.html')
 
 
-@notas_routes.route('/', methods=['post'])
-def inserir_notas():
+@notas_routes.route('/', methods=['POST'])
+def inserir():
     """ inserir anotações novas """
     data = request.json
 
-    nova_anotacao = bancoNotas.create(
+    new_anotacao = bancoNotas.create(
         title = data['title'],
-        text = data['text']
+        text = data['text'],
     )
 
-    return render_template('items.html', blocosnota=nova_anotacao)
+    return render_template('items.html', blocosnota=new_anotacao)
 
 @notas_routes.route('/<int:blocosnota_id>/delete' , methods=['DELETE'])
 def delete(blocosnota_id):

@@ -1,19 +1,19 @@
-<div>
-    <div class="grid sm:grid-cols-1 md:grid-cols-3" id="blocosnota-{{blocosnota.id}}">
+<div id="blocosnota-{{blocosnota.id}}">
+    <div class="bg-[#faa] rounded-lg pl-5">
         <div>
-            <div class="">
-                <div class="">
-                    <h5 class="text-white">{{blocosnota.title}}</h5>
-                    <h6 class="text-white">{{blocosnota.time}}</h6>
-                    <p class="text-white">{{blocosnota.text}}</p>
-                    <button 
-                        type="submit" 
-                        class="btn btn-danger"
-                        c-delete="{{url_for('notas.delete', blocosnota_id=blocosnota.id)}}"
-                    >
-                        <img src="{{url_for('static', filename="image/delete.svg")}}" alt="delete">
-                    </button>
-                </div>
+            <h1 class="text-center font-bold text-2xl lg:text-3xl lg:text-right lg:pr-3 text-[#fff]">{{blocosnota.title}}</h1>
+            <h3 class="text-center text-[#fff] font-mono">{{blocosnota.text}}</h3>
+        </div>
+        <div class="justify-between items-center flex">
+            <p class="font-medium text-[#000] pl-4">{{blocosnota.time}}</p>
+            <div class="pr-4">
+                <button 
+                    type="submit"
+                    class="bg-red-700 px-4 py-1 rounded-md"
+                    c-delete="{{url_for('notas.delete', blocosnota_id=blocosnota.id)}}"
+                >
+                    <img src="{{url_for('static', filename='image/delete.svg')}}"  alt="delete"/>
+                </button>
             </div>
         </div>
     </div>
